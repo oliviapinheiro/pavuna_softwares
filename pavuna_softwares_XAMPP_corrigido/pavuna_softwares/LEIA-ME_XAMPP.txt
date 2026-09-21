@@ -1,0 +1,13 @@
+PAVUNA SOFTWARES — XAMPP
+
+1. Copie a pasta inteira 'pavuna_softwares' para C:\\xampp\\htdocs\\
+2. Inicie Apache e MySQL no XAMPP.
+3. Neste projeto, o MySQL está configurado por padrão para a porta 3307.
+4. No phpMyAdmin, importe SOMENTE o arquivo database.sql.
+5. Acesse: http://localhost/pavuna_softwares/cadastro.html
+6. Crie primeiro uma conta do tipo Coordenador.
+7. Depois acesse: http://localhost/pavuna_softwares/login.html
+
+Se o seu MySQL usar 3306, altere PAVUNA_DB_PORT em config.php ou crie config.local.php a partir de config.local.php.example.
+
+IMPORTANTE: não abra os arquivos HTML pelo duplo clique (file:///). Use o Apache pelo endereço http://localhost/.

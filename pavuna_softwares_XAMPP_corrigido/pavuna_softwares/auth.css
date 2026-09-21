@@ -1,0 +1,83 @@
+/* Páginas de acesso (login, cadastro inicial, esqueci/redefinir senha) — tema SESI/SENAI, sem verde */
+:root{
+  --bg: #F2F5FA;
+  --surface: #FFFFFF;
+  --ink: #1A2233;
+  --ink-soft: #465066;
+  --line: #CBD3E1;
+  --primary: #0E4194;
+  --primary-dark: #0A3273;
+  --primary-tint: #E4ECF8;
+  --accent: #E8490F;
+  --danger: #B3261E;
+  --danger-dark: #8C1D17;
+  --danger-tint: #FBE6E4;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(14,65,148,.12), 0 6px 18px rgba(14,65,148,.08);
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body.auth-body{
+  margin:0; min-height:100vh;
+  background:var(--bg); color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  display:flex; align-items:center; justify-content:center; padding:24px;
+}
+h1,h2,h3{ font-family:'Space Grotesk',sans-serif; letter-spacing:-.01em; margin:0; }
+
+.sr-only{
+  position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important;
+  overflow:hidden !important; clip:rect(0,0,0,0) !important; white-space:nowrap !important; border:0 !important;
+}
+:focus-visible{ outline:3px solid var(--primary); outline-offset:2px; }
+
+.auth-wrap{ width:100%; max-width:440px; }
+
+.auth-brand{ display:flex; flex-direction:column; align-items:center; gap:14px; margin-bottom:22px; text-align:center; }
+.auth-brand-icon{
+  display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:12px 22px;
+}
+.auth-brand-icon img{ height:38px; width:auto; display:block; }
+.auth-brand-text{ display:flex; flex-direction:column; line-height:1.2; }
+.auth-brand-text strong{ font-family:'Space Grotesk'; font-size:1rem; letter-spacing:.02em; color:var(--primary-dark); }
+.auth-brand-text span{ font-size:.82rem; color:var(--ink-soft); }
+
+.auth-card{
+  background:var(--surface); border:1px solid var(--line); border-top:6px solid var(--primary);
+  border-radius:var(--radius); box-shadow:var(--shadow); padding:30px 28px;
+}
+.auth-card h1{ font-size:1.4rem; color:var(--primary-dark); }
+.auth-card p.auth-sub{ margin:8px 0 22px; color:var(--ink-soft); font-size:.95rem; }
+
+.auth-field{ display:flex; flex-direction:column; gap:7px; margin-bottom:18px; }
+.auth-field label{ font-size:.78rem; font-weight:700; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em; }
+.auth-field input, .auth-field select{
+  font-family:'Inter'; font-size:1rem; color:var(--ink);
+  border:1.5px solid #8794AD; border-radius:8px; padding:11px 12px; min-height:46px; background:#fff; width:100%;
+}
+.auth-field input:focus, .auth-field select:focus{ outline:3px solid var(--primary); outline-offset:1px; border-color:var(--primary); }
+.auth-field .auth-hint{ font-size:.82rem; color:var(--ink-soft); }
+.auth-field.field-error input, .auth-field.field-error select{ border-color:var(--danger); border-width:2px; }
+.auth-field .auth-error{ font-size:.85rem; font-weight:600; color:var(--danger-dark); display:none; }
+.auth-field.field-error .auth-error{ display:block; }
+
+.auth-submit{
+  appearance:none; border:none; cursor:pointer; width:100%; min-height:48px; padding:12px;
+  border-radius:8px; background:var(--primary); color:#fff;
+  font-family:'Inter'; font-weight:700; font-size:1rem; margin-top:6px; transition:background .15s;
+}
+.auth-submit:hover{ background:var(--primary-dark); }
+
+.auth-alert{ display:none; margin-bottom:18px; padding:12px 14px; border-radius:8px; font-size:.92rem; line-height:1.4; border:1px solid transparent; }
+.auth-alert.show{ display:block; }
+.auth-alert.error{ background:var(--danger-tint); color:var(--danger-dark); border-color:#EDB7B3; }
+.auth-alert.success{ background:var(--primary-tint); color:var(--primary-dark); border-color:#B5C7E6; }
+
+.auth-footer{ margin:20px 0 0; text-align:center; font-size:.92rem; color:var(--ink-soft); }
+.auth-footer a{ color:var(--primary-dark); font-weight:700; text-decoration:underline; text-underline-offset:3px; display:inline-block; padding:8px 4px; }
+.auth-footer a:hover{ color:var(--accent); }
+
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } .auth-submit{ transition:none; } }

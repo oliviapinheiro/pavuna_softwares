@@ -1,0 +1,12 @@
+<?php
+// Copie este arquivo para config.local.php e ajuste somente o ambiente local.
+// config.local.php está ignorado pelo controle de versão e não deve ser publicado.
+
+define('PAVUNA_DB_HOST', '127.0.0.1');
+define('PAVUNA_DB_PORT', '3307');
+define('PAVUNA_DB_NAME', 'pavuna_softwares');
+define('PAVUNA_DB_USER', 'root');
+define('PAVUNA_DB_PASS', '');
+define('PAVUNA_SITE_URL', 'http://localhost/pavuna_softwares');
+define('PAVUNA_MAIL_FROM', 'no-reply@pavuna.local');
+define('PAVUNA_MAIL_LOG_DEV', 'true');
